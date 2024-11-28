@@ -1,0 +1,50 @@
+.scroll-container {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    
+}
+
+.scroll {
+    white-space: nowrap;
+    margin: 0 2em;
+}
+
+.scroll div {
+    display: flex;
+    gap: 5em; /* Adjust the gap to increase space between the text items */
+}
+
+.scroll p {
+    font-size: 5em;
+    color: black;
+    font-weight: bold;
+    line-height: 100px;
+    padding-right: 20px; /* Add some padding to the right to ensure space between the text */
+}
+
+.RightToLeft {
+    animation: RightToLeft 10s infinite linear;
+}
+
+@keyframes RightToLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.LeftToRight {
+    animation: LeftToRight 10s infinite linear;
+}
+
+@keyframes LeftToRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
