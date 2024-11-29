@@ -147,6 +147,11 @@ span {
 .about {
     width: 100%;
     height: 100vh;
+}
+
+.about h2 {
+    width: 100%;
+    align-items: center;
     padding-left: 8%;
 }
 
@@ -156,10 +161,6 @@ span {
 
 .heading {
     font-size: 20vw;
-}
-
-.about p {
-    font-size: 100%;
 }
 
 .cv {
