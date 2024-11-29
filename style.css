@@ -109,11 +109,11 @@ span {
 }
 
 .home-content h3 {
-    font-size: 700%;
+    font-size: 8vw;
 }
 
 .home-content h1 {
-    font-size: 60px;
+    font-size: 3vw;
     line-height: 1.2;
 }
 
@@ -126,8 +126,7 @@ span {
     padding: 10px 20px;
     border: 2px solid black;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 16px; 
     transition: 0.3s ease;
     cursor: pointer;
     background-color: transparent;
@@ -136,7 +135,7 @@ span {
 .btn-1:hover {
     background-color: blue;
     color: white;
-    border: 2px solid blue;
+    border: 2px solid black;
     transform: scale(1.1); 
 }
 
@@ -144,7 +143,6 @@ span {
     border-radius: 10%;
     width: 400px;
 }
-
 
 .about {
     width: 100%;
@@ -157,7 +155,7 @@ span {
 }
 
 .heading {
-    font-size: 400px;
+    font-size: 20vw;
 }
 
 .about p {
@@ -175,7 +173,6 @@ span {
     width: 100%;
     align-items: center;
     padding-left: 8%;
-    
 }
 
 .Links {
@@ -188,13 +185,15 @@ span {
 
 
 .Links a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Make the link text white */
-    font-size: 18px; /* Adjust font size */
-    padding: 10px 20px; /* Add padding inside the link for better spacing */
-    border: 2px solid black; /* Add border to the links */
-    border-radius: 12px; /* Add border radius to the links */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    text-decoration: none; 
+    color: black; 
+    font-size: 18px; 
+    padding: 10px 20px; 
+    border: 2px solid black; 
+    border-radius: 12px; 
+    transition: background-color 0.3s, transform 0.3s; 
+    display: flex;
+    justify-content: center;
 }
 
 .Links a:hover {

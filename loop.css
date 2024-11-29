@@ -1,13 +1,15 @@
 .scroll-container {
+    position: relative;
+    overflow: hidden; /* Ensures content outside the container is hidden */
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    
 }
 
 .scroll {
     white-space: nowrap;
     margin: 0 2em;
+    position: relative;
 }
 
 .scroll div {
@@ -16,15 +18,14 @@
 }
 
 .scroll p {
-    font-size: 5em;
+    font-size: 4vw;
     color: black;
     font-weight: bold;
     line-height: 100px;
-    padding-right: 20px; /* Add some padding to the right to ensure space between the text */
 }
 
 .RightToLeft {
-    animation: RightToLeft 10s infinite linear;
+    animation: RightToLeft 20s infinite linear;
 }
 
 @keyframes RightToLeft {
@@ -32,19 +33,41 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
 .LeftToRight {
-    animation: LeftToRight 10s infinite linear;
+    animation: LeftToRight 20s infinite linear;
 }
 
 @keyframes LeftToRight {
     from {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
     to {
         transform: translateX(0%);
     }
+}
+
+/* Add fade effect on the sides */
+.scroll-container::before,
+.scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30%; 
+    pointer-events: none;
+    z-index: 1;
+}
+
+.scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f5f5dc, rgba(255, 255, 255, 0));
+}
+
+.scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f5f5dc, rgba(255, 255, 255, 0));
 }
