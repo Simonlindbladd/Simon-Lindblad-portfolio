@@ -6,27 +6,28 @@
     <title>Simon Lindblad</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loop.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="cv.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"></head>
 <body>
     <div class="header">
         <div class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
+            <i class="fas fa-bars"></i> <!-- Hamburger icon -->
         </div>
     </div>
     
     <div class="menu-overlay">
         <div class="overlay-navbar">
-            <!-- Add your navigation links here -->
-            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#cv">Resumé</a>
             <a href="#contact">Contact</a>
+            <a href="mailto:simon.lindblad@medieinstitutet.se">Coffee?</a>
         </div>
     </div>
+    
     
     
     
@@ -35,7 +36,7 @@
         <div class="home-content">
             <h3>Hello</h3>
 
-            <h1>My name is  <span>Simon</span><br>An Frontend Developer<br>From Gothenburg <span class="hilight">SWE</span></h1>
+            <h1>My name is  <span>Simon</span><br>A Frontend Developer<br>From Gothenburg <span class="hilight">SWE</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
             <div class="btn-box">
                 <button class="btn-1">Experience</button>
@@ -50,35 +51,91 @@
     <hr>
 
     <section class="about" id="about">
-            <h2 class="heading">about</h2>
-
-            <div class="scroll-container">
-                <div class="scroll">
-                    <div class="RightToLeft">
-                        <p>Enthusiast 💻 Problem Solver 🛠️ Take a coffee? ☕️ Send a mail ✉️ Foodie 🍝 Wizzard 🧙‍♂️ Football Fan ⚽</p>
-                        
-                    </div>
-                    <div class="LeftToRight">
-                        <p>Your Go-to Guy 🤙 Skier ⛷️ Team Player 🫱🏼‍🫲🏽 Sailing ⛵ Design 🎨 Music Junkie 🎧 Brainstorm Buddy 🌩️ Minimalist 📐</p>
-                        
-                    </div>
-                </div>
+        <h2 class="heading">about.</h2>
+    
+        <!-- New section for boxes -->
+        <div class="about-boxes">
+            <div class="box">
+                <h3>Background</h3>
+                <p>I'm a Frontend Developer passionate about creating user-friendly websites and programs with focus on design and consumer. With a background in marketing and project managment i apply this to my daily work</p>
+            </div>
+            <div class="box">
+                <h3>Skills</h3>
+                <p>Experienced in marketing and project management, with a focus on delivering user-centered solutions through effective collaboration and strategic planning.</p>
+            </div>
+            <div class="box">
+                <h3>Hobbies</h3>
+                <p>I love sailing, skiing, and staying active. Football is my favorite sport, and I enjoy cheering for my favorite teams.</p>
+            </div>
+            <div class="box">
+                <h3>Values</h3>
+                <p>Teamwork, minimalism, and problem-solving drive me. I believe in continuous learning and exploring creative ideas and implement this in my work and private life.</p>
             </div>
         </div>
     </section>
+    
 
     <hr>
 
     <section class="cv" id="cv">
+        <h2 class="heading">Resumé</h2>
+        
+        <!-- Wrap the content in a div to separate it from the heading -->
         <div class="cv-content">
-            <h2 class="heading">Resumé</h2>     
+            <!-- Personal Information -->
+            <div class="personal-info">
+                <h3>Personal Information</h3>
+                <ul>
+                    <li>Name: Simon Lindblad</li>
+                    <li>Location: Gothenburg</li>
+                    <li>Email: simon.lindblad@email.com</li>
+                    <li>Phone: +46 123 456 789</li>
+                </ul>
+            </div>
+    
+            <!-- Education -->
+            <div class="education">
+                <h3>Education</h3>
+                <ul>
+                    <li><strong>Frontend Development Course</strong> - University of Gothenburg (2023-Present)</li>
+                    <li><strong>Marketing Bachelor</strong> - Gothenburg Business School (2015-2018)</li>
+                </ul>
+            </div>
+    
+            <!-- Work Experience -->
+            <div class="work-experience">
+                <h3>Work Experience</h3>
+                <ul>
+                    <li><strong>Project Manager</strong> - XYZ Company (2020-2023)</li>
+                    <li><strong>Marketing Specialist</strong> - ABC Corp (2018-2020)</li>
+                </ul>
+            </div>
+    
+            <!-- Skills -->
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>JavaScript, CSS, HTML</li>
+                    <li>Project Management</li>
+                    <li>Marketing & Sales</li>
+                    <li>Team Collaboration</li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out to me via email or phone.</p>
+            </div>
         </div>
     </section>
+    
+    
 
     <hr>
 
     <section class="footer" id="contact">
-        <h2 class="heading">Contact</h2>  
+        <h2 class="heading">Contact.</h2>  
     
         <!-- Scroll section added between h2 and Links -->
         <div class="scroll-container">
@@ -89,7 +146,6 @@
                 </div>
                 <div class="LeftToRight">
                     <p>Your Go-to Guy 🤙 Skier ⛷️ Team Player 🫱🏼‍🫲🏽 Sailing ⛵ Design 🎨 Music Junkie 🎧 Brainstorm Buddy 🌩️ Minimalist 📐</p>
-                    
                 </div>
             </div>
         </div>

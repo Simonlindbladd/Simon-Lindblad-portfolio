@@ -1,0 +1,88 @@
+.cv .heading {
+    width: 100%;
+    align-items: center;
+    padding-left: 8%;
+}
+
+/* CV Content Wrapper */
+.cv-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.cv-content > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and List Styles for Sections */
+.cv-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cv-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cv-content ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Personal Information Styling */
+.personal-info ul {
+    padding-left: 20px;
+}
+
+.personal-info li {
+    line-height: 1.6;
+}
+
+/* Education, Work Experience, Skills Styling */
+.education ul,
+.work-experience ul,
+.skills ul {
+    padding-left: 20px;
+}
+
+.education li,
+.work-experience li,
+.skills li {
+    line-height: 1.6;
+}
+
+/* Contact Information Styling */
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-content h3 {
+        font-size: 22px;
+    }
+
+    .cv-content ul li {
+        font-size: 14px;
+    }
+
+    .cv .heading {
+        font-size: 28px;
+    }
+}

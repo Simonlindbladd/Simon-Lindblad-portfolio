@@ -1,0 +1,114 @@
+/* About section */
+.about {
+    width: 100%;
+    height: 110vh;
+}
+
+/* Boxes layout */
+.about-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Box styles */
+.box {
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow opacity */
+    padding: 1.5rem;
+    flex: 1 1 calc(25% - 1.5rem);
+    max-width: 20vw;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    position: relative; /* For emoji positioning */
+}
+
+.box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.box p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.box:hover {
+    background-color: blue;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.box:hover h3,
+.box:hover p {
+    color: #fff;
+}
+
+.box:hover::after {
+    content: "😊";
+    font-size: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #fff;
+    z-index: 10;
+}
+
+/* Responsive adjustments */
+
+/* For small devices (mobile) */
+@media (max-width: 767px) {
+    .about-boxes {
+        justify-content: space-around; /* Adjust layout */
+    }
+
+    .box {
+        flex: 1 1 calc(50% - 1.5rem); /* Two boxes per row */
+        max-width: 45vw;
+    }
+
+    .box h3 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .box p {
+        font-size: 1rem; /* Adjust paragraph size for readability */
+    }
+}
+
+/* For extra small devices (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 100%; /* Full width for boxes on very small screens */
+        max-width: 100%;
+    }
+
+    .box h3 {
+        font-size: 1.8rem;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling for the About section heading */
+.about h2 {
+    width: 100%;
+    align-items: center;
+    padding-left: 8%;
+}
+
+.about-content {
+    width: 100%;
+}
+
+/* Heading for large screens */
+.heading {
+    font-size: 20vw;
+}
