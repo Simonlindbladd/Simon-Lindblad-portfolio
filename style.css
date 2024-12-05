@@ -80,15 +80,22 @@ body {
 }
 
 .overlay-navbar a:hover {
-    color: black;
+    color: #f5f5dc;
+    transform: scale(1.1); 
 }
 
 .hamburger-menu.active i {
     transform: rotate(45deg);
+    color: white;
+}
+
+/* Make icon largfer in hamburger menu */
+.fas fa-bars {
+    
 }
 
 .hamburger-menu.active i:before {
-    content: "\f00d"; /* Font Awesome cross icon */
+    content: "\f00d"; 
 }
 
 span {

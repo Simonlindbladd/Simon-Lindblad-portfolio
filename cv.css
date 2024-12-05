@@ -7,82 +7,88 @@
 /* CV Content Wrapper */
 .cv-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr; /* Left and middle */
     gap: 20px;
     margin: 0 auto;
     max-width: 1000px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20vh; 
 }
 
-.cv-content > div {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.left-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-/* Heading and List Styles for Sections */
-.cv-content h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.cv-content ul {
+.left-section ul {
     list-style-type: none;
     padding-left: 0;
+    margin: 0;
 }
 
-.cv-content ul li {
-    font-size: 16px;
-    color: #555;
+.left-section ul li {
+    font-size: 1rem;
+    font-weight: 500;
     margin-bottom: 8px;
 }
 
-/* Personal Information Styling */
-.personal-info ul {
-    padding-left: 20px;
+.middle-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-.personal-info li {
+.middle-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.middle-section ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
     line-height: 1.6;
 }
 
-/* Education, Work Experience, Skills Styling */
-.education ul,
-.work-experience ul,
-.skills ul {
-    padding-left: 20px;
-}
-
-.education li,
-.work-experience li,
-.skills li {
+.middle-section p {
+    font-size: 1rem;
     line-height: 1.6;
-}
-
-/* Contact Information Styling */
-.contact-info p {
-    font-size: 16px;
-    color: #555;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .cv-content {
-        grid-template-columns: 1fr;
-    }
-
-    .cv-content h3 {
-        font-size: 22px;
-    }
-
-    .cv-content ul li {
-        font-size: 14px;
+        grid-template-columns: 1fr; /* Stack sections on smaller screens */
     }
 
     .cv .heading {
         font-size: 28px;
     }
+
+    .left-section h3, .middle-section h3 {
+        font-size: 22px;
+    }
+
+    .middle-section ul li, .left-section ul li {
+        font-size: 14px;
+    }
+}
+
+
+
+.divider {
+    width: 100%;
+    height: 1px; /* Adjust thickness */
+    background-color: #333; /* Line color */
+    margin: 20px 0; /* Spacing above and below */
+}
+
+.custom-underline {
+    display: inline-block; /* Makes the border fit the text */
+    border-bottom: 2px solid #333; /* Underline color and thickness */
+    padding-bottom: 4px; /* Space between the text and the underline */
+    background-color: blue;
+    color: white;
 }
