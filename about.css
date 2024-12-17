@@ -1,7 +1,7 @@
 /* About section */
 .about {
     width: 100%;
-    height: 110vh;
+    height: 135vh;
 }
 
 /* Boxes layout */
@@ -29,6 +29,7 @@
     font-size: 2.5rem;
     margin-bottom: 0.8rem;
     transition: color 0.3s ease;
+    font-style: italic;
 }
 
 .box p {
