@@ -277,47 +277,6 @@ span {
 }
 
 
-.footer h2 {
-    width: 100%;
-    align-items: center;
-    padding-left: 8%;
-}
-
-.Links {
-    display: flex; /* Arrange links horizontally */
-    justify-content: center; /* Center links horizontally */
-    gap: 20px; /* Add space between links */
-    width: 100%; /* Ensure the links container takes the full width */
-    padding-bottom: 20px; /* Space between links and bottom of the footer */
-}
-
-
-.Links a {
-    text-decoration: none; 
-    color: black; 
-    font-size: 18px; 
-    padding: 10px 20px; 
-    border: 2px solid black; 
-    border-radius: 12px; 
-    transition: background-color 0.3s, transform 0.3s; 
-    display: flex;
-    justify-content: center;
-}
-
-.Links a:hover {
-    background-color: blue; 
-    color: white;
-    transform: scale(1.1); 
-}
-
-.footer-text {
-    color: black;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 2%;
-}
-
-
 hr {
     border: 0;
     border-top: 3px solid black;

@@ -24,6 +24,13 @@
     line-height: 100px;
 }
 
+/* Add a media query for smaller screens, like phones */
+@media (max-width: 767px) {
+    .scroll p {
+        font-size: 8vw; /* Adjust this value to make the text larger on phones */
+    }
+}
+
 .RightToLeft {
     animation: RightToLeft 20s infinite linear;
 }
