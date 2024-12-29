@@ -1,13 +1,13 @@
 .cv .heading {
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    align-items: center;
+    padding-left: 8%;
 }
 
 /* CV Content Wrapper */
 .cv-content {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Default: two columns */
+    grid-template-columns: 1fr 2fr; 
     gap: 20px;
     margin: 0 auto;
     max-width: 1200px;
@@ -20,7 +20,7 @@
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 10px;
-    text-transform: uppercase; /* Adds emphasis to section titles */
+    text-transform: uppercase; 
 }
 
 .left-section ul, .middle-section ul {

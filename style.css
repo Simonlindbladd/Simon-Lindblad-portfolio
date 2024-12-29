@@ -34,7 +34,6 @@ body {
     margin-right: 50px;
 }
 
-/* Hamburger icon */
 .hamburger-menu i {
     font-size: 40px;
     transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
@@ -71,6 +70,7 @@ body {
     align-items: center;
     height: 100%;
     opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .menu-overlay.active .overlay-navbar {
@@ -78,7 +78,7 @@ body {
 }
 
 .overlay-navbar a {
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: bold;
     color: white;
     margin: 20px 0;
@@ -92,6 +92,45 @@ body {
 
 .hamburger-menu.active i:before {
     content: "\f00d"; 
+}
+
+.hamburger-menu i {
+    font-size: 40px;
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.hamburger-menu.active i {
+    font-size: 50px; 
+    color: white; 
+    transform: rotate(45deg); 
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu i {
+        font-size: 60px;  /* Smaller hamburger icon */
+    }
+
+    .overlay-navbar a {
+        font-size: 15vw; /* Increase text size on mobile portrait view */
+        margin: 15px 0;  /* Adjust margins */
+    }
+}
+
+@media (max-width: 480px) {
+    .hamburger-menu i {
+        font-size: 35px;  /* Even smaller icon for smaller screens */
+    }
+
+    .overlay-navbar a {
+        font-size: 20vw;  /* Larger text for very small screens */
+        margin: 10px 0;  /* Smaller margin on very small screens */
+    }
 }
 
 span {

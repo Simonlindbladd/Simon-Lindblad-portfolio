@@ -1,19 +1,18 @@
-/* About section */
+
 .about {
     width: 100%;
     height: auto;
 }
 
-/* Boxes layout */
 .about-boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-/* Box styles */
 .box {
     border: 2px solid black;
     border-radius: 8px;
@@ -29,7 +28,6 @@
     font-size: 2.5rem;
     margin-bottom: 0.8rem;
     transition: color 0.3s ease;
-    font-style: italic;
 }
 
 .box p {
@@ -84,6 +82,9 @@
 
 /* For extra small devices (e.g., iPhone SE) */
 @media (max-width: 480px) {
+    .about-boxes {
+        padding: 0 1rem; /* Adjust padding */
+    }
     .box {
         flex: 1 1 100%; /* Full width for boxes on very small screens */
         max-width: 100%;
