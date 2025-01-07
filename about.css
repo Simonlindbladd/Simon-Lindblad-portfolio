@@ -21,7 +21,6 @@
     flex: 1 1 calc(25% - 1.5rem);
     max-width: 20vw;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    position: relative; /* For emoji positioning */
 }
 
 .box h3 {
@@ -41,6 +40,7 @@
     background-color: blue;
     color: #fff;
     transform: translateY(-5px);
+    box-shadow: black 5px 5px;
 }
 
 .box:hover h3,
@@ -49,7 +49,6 @@
 }
 
 .box:hover::after {
-    content: "😊";
     font-size: 2rem;
     position: absolute;
     top: 0.5rem;
