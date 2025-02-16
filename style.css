@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +18,7 @@ body {
     background-color: #f5f5dc;
 }
 
+/* Header & Hamburger Menu */
 .header {
     position: fixed;
     top: 0;
@@ -113,7 +115,7 @@ body {
 
 @media (max-width: 768px) {
     .hamburger-menu i {
-        font-size: 60px;  /* Smaller hamburger icon */
+        font-size: 50px;  /* Adjust hamburger icon for mobile/tablet */
     }
 
     .overlay-navbar a {
@@ -124,7 +126,7 @@ body {
 
 @media (max-width: 480px) {
     .hamburger-menu i {
-        font-size: 35px;  /* Even smaller icon for smaller screens */
+        font-size: 35px;  /* Even smaller icon for very small screens */
     }
 
     .overlay-navbar a {
@@ -137,14 +139,15 @@ span {
     color: blue;
 }
 
+/* Home Section */
 .home {
     width: 100%;
     height: 90vh; /* Full viewport height */
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    align-items: center;   /* Center vertically */
     background-color: transparent;
-    flex-direction: row;
+    flex-direction: row; /* Default: text on left, image on right */
 }
 
 .home-content {
@@ -165,7 +168,7 @@ span {
     margin: 25px 0 30px;
 }
 
-.btn-1 {
+.btn-box .btn-1 {
     padding: 10px 20px;
     border: 2px solid black;
     border-radius: 8px;
@@ -176,117 +179,109 @@ span {
     background-color: transparent;
 }
 
-.btn-1:hover {
+.btn-box .btn-1:hover {
     background-color: blue;
     color: white;
     border: 2px solid black;
     transform: scale(1.1); 
 }
 
+/* Image Box - Responsive & Smaller */
 .img-box img {
     border-radius: 10%;
-    width: 400px;
+    width: 100%;
+    max-width: 300px;  /* Global max-width reduced */
+    height: auto;
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
-    .home-content {
-        width: 70%;
-    }
 
-    .home-content h1 {
-        font-size: 4vw;
-    }
-
-    .home-content p {
-        font-size: 16px;
-    }
-
-    .img-box img {
-        width: 350px;
-    }
-}
-
+/* For tablets & smaller screens: add side margins, stack layout, and push text down further */
 @media (max-width: 768px) {
-    .home-content {
-        width: 80%;
+    .home {
+        flex-direction: column; /* Stack text and image */
+        padding: 0 20px;        /* 20px margin on left/right */
     }
-
+    
+    .home-content {
+        width: 100%;
+        text-align: center;     /* Center text if desired */
+        margin-top: 60px;       /* Push text further down */
+    }
+    
+    .img-box {
+        margin-top: 20px;       /* Space between text and image */
+    }
+    
     .home-content h3 {
         font-size: 10vw;
     }
-
+    
     .home-content h1 {
         font-size: 5vw;
     }
-
+    
     .home-content p {
         font-size: 14px;
     }
-
+    
     .img-box img {
-        width: 300px;
+        max-width: 225px;       /* Adjusted for tablet screens */
     }
-
-    .btn-1 {
+    
+    .btn-box .btn-1 {
         font-size: 14px;
     }
 }
 
+/* For mobile screens: further adjustments */
 @media (max-width: 480px) {
     .home-content {
         width: 90%;
+        margin-top: 60px;   /* Ensure text is pushed down further */
     }
-
+    
     .home-content h3 {
         font-size: 12vw;
     }
-
+    
     .home-content h1 {
         font-size: 6vw;
     }
-
+    
     .home-content p {
         font-size: 12px;
     }
-
+    
     .img-box img {
-        width: 250px;
+        max-width: 200px;       /* Reduced for mobile screens */
     }
-
-    .btn-1 {
+    
+    .btn-box .btn-1 {
         font-size: 14px;
         padding: 8px 16px;
     }
-
-    /* Change Flexbox direction to column and move the image below text */
-    .home {
-        flex-direction: column; /* Stack content vertically */
-    }
-
-    .img-box {
-        margin-top: 20px; /* Add space between text and image */
-    }
 }
 
+/* Additional breakpoints for very small devices */
 @media (max-width: 375px) {
     .home-content h3 {
         font-size: 14vw;
     }
-
+    
     .home-content h1 {
         font-size: 7vw;
     }
-
+    
     .home-content p {
         font-size: 12px;
     }
-
+    
     .img-box img {
-        width: 200px;
+        max-width: 175px;
     }
-
-    .btn-1 {
+    
+    .btn-box .btn-1 {
         font-size: 14px;
         padding: 8px 16px;
     }
@@ -296,25 +291,24 @@ span {
     .home-content h3 {
         font-size: 16vw;
     }
-
+    
     .home-content h1 {
         font-size: 8vw;
     }
-
+    
     .home-content p {
         font-size: 12px;
     }
-
+    
     .img-box img {
-        width: 180px;
+        max-width: 150px;
     }
-
-    .btn-1 {
+    
+    .btn-box .btn-1 {
         font-size: 14px;
         padding: 8px 16px;
     }
 }
-
 
 hr {
     border: 0;
@@ -324,14 +318,7 @@ hr {
     border-radius: 15px;
 }
 
-
-
-
-
-
-
-
-/* From Uiverse.io by mrhyddenn */ 
+/* Mouse Scroll Animation (From Uiverse.io by mrhyddenn) */
 .mouse-btn {
     margin: 10px auto;
     width: 35px;
@@ -339,9 +326,9 @@ hr {
     border: 3px solid rgba(0, 0, 0, 0.918);
     border-radius: 20px;
     display: flex;
-  }
+}
   
-  .mouse-scroll {
+.mouse-scroll {
     display: block;
     width: 15px;
     height: 15px;
@@ -349,9 +336,9 @@ hr {
     border-radius: 50%;
     margin: auto;
     animation: scrolling13 1s linear infinite;
-  }
+}
   
-  @keyframes scrolling13 {
+@keyframes scrolling13 {
     0% {
       opacity: 0;
       transform: translateY(-20px);
@@ -361,13 +348,9 @@ hr {
       opacity: 1;
       transform: translateY(20px);
     }
-  }
+}
 
-
-
-
-
- 
+/* Button Styles */
 .button {
     --main-focus: #2d8cf0;
     --font-color: #323232;
@@ -386,27 +369,27 @@ hr {
     background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
-  }
+}
   
 .button-cv {
     margin: 0;
-      display: flex;
-      margin-right: 10vw;
-      justify-content: flex-end;
-      align-items: center;
-  }
+    display: flex;
+    margin-right: 10vw;
+    justify-content: flex-end;
+    align-items: center;
+}
 
-  .button, .button__icon, .button__text {
+.button, .button__icon, .button__text {
     transition: all 0.3s;
-  }
+}
   
-  .button .button__text {
+.button .button__text {
     transform: translateX(22px);
     color: var(--font-color);
     font-weight: 600;
-  }
+}
   
-  .button .button__icon {
+.button .button__icon {
     position: absolute;
     transform: translateX(109px);
     height: 100%;
@@ -415,31 +398,27 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .button .svg {
+.button .svg {
     width: 20px;
     fill: var(--main-color);
-  }
+}
   
-  .button:hover {
+.button:hover {
     background: var(--bg-color);
-  }
+}
   
-  .button:hover .button__text {
+.button:hover .button__text {
     color: transparent;
-  }
+}
   
-  .button:hover .button__icon {
+.button:hover .button__icon {
     width: 148px;
     transform: translateX(0);
-  }
+}
   
-  .button:active {
+.button:active {
     transform: translate(3px, 3px);
     box-shadow: 0px 0px var(--main-color);
-  }
-
-
-
-  
+}
