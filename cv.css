@@ -1,3 +1,5 @@
+/* ========== CV Section ========== */
+
 .cv .heading {
     width: 100%;
     align-items: center;
@@ -16,20 +18,23 @@
     padding: 0 20px;
 }
 
-.left-section h3, .middle-section h3 {
+.left-section h3, 
+.middle-section h3 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 10px;
     text-transform: uppercase; 
 }
 
-.left-section ul, .middle-section ul {
+.left-section ul, 
+.middle-section ul {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
 
-.left-section ul li, .middle-section ul li {
+.left-section ul li, 
+.middle-section ul li {
     font-size: 1rem;
     font-weight: 450;
     margin-bottom: 10px;
@@ -49,6 +54,7 @@
     margin: 20px 0;
 }
 
+/* Custom Underline */
 .custom-underline {
     display: inline-block;
     border-bottom: 2px solid #333;
@@ -56,6 +62,8 @@
     background-color: lightgray;
     color: black;
 }
+
+/* ========== Button Styles ========== */
 
 .button {
     --main-focus: #2d8cf0;
@@ -75,27 +83,30 @@
     background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
-  }
+    transition: all 0.3s;
+}
   
 .button-cv {
     margin: 0;
-      display: flex;
-      margin-right: 10vw;
-      justify-content: flex-end;
-      align-items: center;
-  }
+    display: flex;
+    margin-right: 10vw;
+    justify-content: flex-end;
+    align-items: center;
+}
 
-  .button, .button__icon, .button__text {
+.button, 
+.button__icon, 
+.button__text {
     transition: all 0.3s;
-  }
+}
   
-  .button .button__text {
+.button .button__text {
     transform: translateX(22px);
     color: var(--font-color);
     font-weight: 600;
-  }
+}
   
-  .button .button__icon {
+.button .button__icon {
     position: absolute;
     transform: translateX(109px);
     height: 100%;
@@ -104,102 +115,130 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .button .svg {
+.button .svg {
     width: 20px;
     fill: var(--main-color);
-  }
+}
   
-  .button:hover {
+.button:hover {
     background: var(--bg-color);
-  }
+}
   
-  .button:hover .button__text {
+.button:hover .button__text {
     color: transparent;
-  }
+}
   
-  .button:hover .button__icon {
+.button:hover .button__icon {
     width: 148px;
     transform: translateX(0);
-  }
+}
   
-  .button:active {
+.button:active {
     transform: translate(3px, 3px);
     box-shadow: 0px 0px var(--main-color);
-  }
+}
 
+/* ========== Media Queries ========== */
 
-  
-
-/* Mobile Responsiveness */
+/* For screens up to 1024px (Tablets & Small Laptops) */
 @media (max-width: 1024px) {
     .cv-content {
         grid-template-columns: 1fr; /* Single-column layout */
         gap: 15px;
     }
-
-    .left-section, .middle-section {
-        padding: 0 10px; /* Add padding for smaller screens */
+    .left-section, 
+    .middle-section {
+        padding: 0 10px;
     }
-
     .cv .heading {
         font-size: 5rem;
     }
-
-    .left-section h3, .middle-section h3 {
+    .left-section h3, 
+    .middle-section h3 {
         font-size: 1.6rem;
     }
-
-    .left-section ul li, .middle-section ul li {
+    .left-section ul li, 
+    .middle-section ul li {
         font-size: 0.95rem;
     }
 }
 
-/* Extra Small Screens */
+/* For screens up to 768px (Tablets & Small Devices) */
 @media (max-width: 768px) {
     .cv .heading {
         font-size: 5rem;
     }
-
-    .left-section h3, .middle-section h3 {
+    .left-section h3, 
+    .middle-section h3 {
         font-size: 1.4rem;
     }
-
-    .left-section ul li, .middle-section ul li {
+    .left-section ul li, 
+    .middle-section ul li {
         font-size: 0.9rem;
     }
-
+    
+    /* Adjust Button for Tablets */
     .button {
+        width: 120px;
+        height: 40px;
         font-size: 1rem;
         padding: 10px 20px;
     }
+    .button .button__icon {
+        transform: translateX(90px);
+        width: 35px;
+    }
+    .button:hover .button__icon {
+        width: 110px;
+        transform: translateX(0);
+    }
 }
 
+/* For screens up to 480px (Extra Small Devices/Mobile) */
 @media (max-width: 480px) {
     .cv-content {
         padding: 0 10px;
     }
-
     .cv .heading {
         font-size: 5rem;
     }
-
-    .left-section h3, .middle-section h3 {
+    .left-section h3, 
+    .middle-section h3 {
         font-size: 1.2rem;
     }
-
-    .left-section ul li, .middle-section ul li {
+    .left-section ul li, 
+    .middle-section ul li {
         font-size: 0.85rem;
-    }
-
-    .button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
     }
 }
 
-
-
-
-
+/* New Round Arrow Button for Tablets and Smaller (up to 1024px) */
+@media (max-width: 1024px) {
+    .button {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        padding: 0 !important;
+    }
+    .button .button__icon {
+        transform: translateX(0) !important;
+        width: 100% !important;
+        background-color: transparent !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button .button__text {
+        display: none !important;
+    }
+    .button .button__icon svg {
+        display: none !important;
+    }
+    .button .button__icon::after {
+        content: "↓";
+        font-size: 1.5rem;
+        color: var(--main-color);
+    }
+}
