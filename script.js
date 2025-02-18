@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   progressBar.style.top = '0';
   progressBar.style.left = '0';
   progressBar.style.height = '4px';
-  progressBar.style.backgroundColor = '#3498db';
+  progressBar.style.backgroundColor = 'blue';
   progressBar.style.zIndex = '9999';
   progressBar.style.transition = 'width 0.1s ease-out';
   document.body.appendChild(progressBar);
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar.style.width = scrollPercent + '%';
   });
 
-
   function typewriter(element, delay = 300) { 
     const text = element.textContent;
     element.textContent = "";
@@ -72,17 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
       index++;
       if (index === text.length) {
         clearInterval(interval);
-        const blinkingDot = document.createElement('span');
-        blinkingDot.textContent = '.';
-        blinkingDot.classList.add('blinking-dot');
-        element.appendChild(blinkingDot);
       }
     }, delay);
-  }
+  }  
 
   const homeHeading = document.querySelector('.home-content h3');
   if (homeHeading) {
-    typewriter(homeHeading, 200); // Call with 200ms delay for a slower effect
+    typewriter(homeHeading, 300); 
   }
 
   // 4. Intersection Observer for Fade-In from Bottom on Sections
